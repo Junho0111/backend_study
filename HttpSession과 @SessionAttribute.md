@@ -219,15 +219,19 @@ HttpSession.getAttribute("user")
 
 <br>
 
->1단계 - 우선 쿠키에서 jsessionid를 꺼내어 세션저장소(jsessionid/해당회원 모든 정보(map형태))에서 jsessionid를 key로 해당유저의 모든정보가 담긴 value를 꺼내옵니다.<br>
+> 1단계 - 우선 쿠키에서 jsessionid를 꺼내어 세션저장소(jsessionid/해당회원 모든 정보(map형태))에서 jsessionid를 key로 해당유저의 모든정보가 담긴 value를 꺼내옵니다.
+
 <br>
-2단계 - 꺼내온 value는 유저정보저장소(user/ 유저정보)에서 상수user라는 Key로 유저정보인 value를 꺼내올수 있습니다.<br>따라서 같은 key를 씀에도 불구하고 유저a와 유저b를 구분하여 값을 가져오게됩니다.
+
+> 2단계 - 꺼내온 value는 유저정보저장소(user/ 유저정보)에서 상수user라는 Key로 유저정보인 value를 꺼내올수 있습니다.<br>따라서 같은 key를 씀에도 불구하고 유저a와 유저b를 구분하여 값을 가져오게됩니다.
+
 <br>
-<br>추가로 만약 user말고도 user나이를 따로 빼어 age라는 상수로 나이값을 저장한다는 가정하에 유저정보 저장소는 아래와 같은 구조가됩니다.
+
+> 추가로 만약 user말고도 user나이를 따로 빼어 age라는 상수로 나이값을 저장한다는 가정하에 유저정보 저장소는 아래와 같은 구조가됩니다.
 <br>[user/유저정보]
 <br>[age/유저나이]
 <br>따라서 getAttribute("age")를 하면 해당유저 나이가 나오게되는것입니다.
- 
+  
  <br>
 
 # 정리 및 교훈 
